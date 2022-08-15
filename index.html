@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craiglist</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1 class="heading">Craiglist</h1>
+    <hr />
+    <div id="cards">
+      <!-- <div class="card">
+        <h1 class="title">Audi A5 Sportback</h1>
+        <img
+          src="https://turbo.azstatic.com/uploads/f460x343/2022%2F04%2F08%2F17%2F22%2F38%2Fbbf3dcf5-a814-4f3b-aff9-8f3e3134e261%2F8654_VAJrv_IL5gDFtqbRM5sd7Q.jpg"
+          alt="img"
+          class="images"
+        />
+        <p class="price">49,500 $</p>
+        <a href="https://turbo.az/autos/6170955-audi-a5-sportback" class="link"
+          >Learn More</a
+        >
+      </div> -->
+      <!-- <div class="card">
+        <h1 class="title">BMW 428</h1>
+        <img
+          src="https://turbo.azstatic.com/uploads/f460x343/2022%2F07%2F12%2F15%2F19%2F09%2Fafab01ea-eed9-4e9b-82ad-ab03db1f088a%2F37515_8sFmuy_XDyLAkwmKT55OeQ.jpg"
+          alt="img"
+          class="images"
+        />
+        <p class="price">23,800 $</p>
+        <a class="link">Learn More</a>
+      </div>
+      <div class="card">
+        <h1 class="title">Mercedes C 300</h1>
+        <img
+          src="https://turbo.azstatic.com/uploads/f460x343/2022%2F08%2F02%2F12%2F42%2F38%2F23ce1d5e-0810-4d9a-80cc-3d520f91a447%2F93758_wHZo9nIoRmSluU317g2lsw.jpg"
+          alt="img"
+          class="images"
+        />
+        <p class="price">30,000 $</p>
+        <a class="link">Learn More</a>
+      </div>
+      <div class="card">
+        <h1 class="title">Land Rover Range Rover</h1>
+        <img
+          src="https://turbo.azstatic.com/uploads/f460x343/2022%2F07%2F11%2F17%2F15%2F21%2F0e6b8e22-362f-4354-b915-119b70c07bf7%2F74080_x5nPy9moSCmvuRk_tJhAbw.jpg"
+          alt="img"
+          class="images"
+        />
+        <p class="price">79,900 $</p>
+        <a class="link">Learn More</a>
+      </div>
+      <div class="card">
+        <h1 class="title">Porsche Cayenne S</h1>
+        <img
+          src="https://turbo.azstatic.com/uploads/f460x343/2022%2F08%2F08%2F12%2F33%2F37%2F7d135f66-f8ea-4e86-9bce-2d5f94aa5d9e%2F30472_fs2DFIAAN5PPzp98IuKR6A.jpg"
+          alt="img"
+          class="images"
+        />
+        <p class="price">16,000 $</p>
+        <a class="link">Learn More</a>
+      </div>
+      <div class="card">
+        <h1 class="title">Toyota Land Cruiser</h1>
+        <img
+          src="https://turbo.azstatic.com/uploads/f460x343/2022%2F06%2F21%2F14%2F54%2F03%2F96ada15c-425e-482e-a4fa-d637c5e34e81%2F13587_bY5s-HkqJms5WOUBuTUSdQ.jpg"
+          alt="img"
+          class="images"
+        />
+        <p class="price">28,200 $</p>
+        <a class="link">Learn More</a>
+      </div> -->
+    </div>
+    <div class="button">
+      <a href="https://google.com">Go to page</a>
+    </div>
+  </body>
+
+  <script>
+    fetch("https://fakestoreapi.com/products")
+      .then((data) => {
+        return data.json();
+      })
+      .then((completedata) => {
+        let data1 = "";
+        completedata.map((values) => {
+          data1 += `      
+          <div class="card">
+            <h1 class="title">${values.title.slice(0,17)}...</h1>
+            <img
+              src="${values.image}"
+              alt="img"
+              class="images"
+            />
+            <p class="price">${values.price} $</p>
+            <a href="${values.link}" class="link">Learn More</a
+            >
+          </div>
+        `;
+        });
+        document.getElementById("cards").innerHTML = data1;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  </script>
+</html>

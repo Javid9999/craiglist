@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 15px;
+    box-sizing:initial;
+  }
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(41, 41, 41);
+}
+
+#cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+}
+
+.card {
+    position: relative;
+    width: 23%;
+    background-color: #f7f7f7;
+    border-width: 1px;
+    border-radius: 10px;    
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 65px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.images  {
+    width:100%;
+    margin: 0 !important;
+    margin-bottom: 60px !important;
+    width: 150px;
+    height: 150px;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(41, 41, 41)
+}
+
+.price {
+    position: absolute;
+    left: 5px;
+    bottom: 4px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 16px;
+    font-size: 1.2rem;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(253, 65, 65);
+}
+
+.link {
+    position: absolute;
+    right: 5px;
+    bottom: 0.5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    text-align: right;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: white;
+    color: rgb(87, 87, 87);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+.button {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .button a {
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    text-decoration: none;
+    padding: 15px 15px;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    color: rgb(87, 87, 87);
+  }
